@@ -15,7 +15,6 @@ function Folder({ title, id, children, level }: FolderType): JSX.Element {
   const loadNewData = () => {
     setIsOpen(!isOpen)
     if (loadedIds.includes(id)) {
-      console.log('already')
       return;
     }
     getContent(id).then(data => {

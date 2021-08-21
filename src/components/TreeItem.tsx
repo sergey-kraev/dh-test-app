@@ -2,9 +2,16 @@ import React from 'react'
 import { ReactComponent as CaretIcon } from '../assets/caret.svg';
 import { ReactComponent as FolderIcon } from '../assets/folder.svg';
 import { ReactComponent as FileIcon } from '../assets/file.svg';
-import { TreeItem as TreeItemType } from '../types';
 
-function TreeItem({ title, level, isOpen, isFolder, onClick }: TreeItemType): JSX.Element {
+type Props = {
+  title: string;
+  level: number;
+  isOpen: boolean;
+  isFolder: boolean;
+  onClick?: () => void;
+}
+
+function TreeItem({ title, level, isOpen, isFolder, onClick }: Props): JSX.Element {
   return (
     <div className='tree-item' onClick={onClick}>
       <span style={{ width: `calc(24px * ${level}`}}></span>

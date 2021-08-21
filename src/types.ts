@@ -10,11 +10,3 @@ export type Folder = {
   children?: (Folder | File)[];
   level: number;
 }
-
-export type TreeItem = {
-  title: string;
-  level: number;
-  isOpen: boolean;
-  isFolder: boolean;
-  onClick?: () => void;
-}

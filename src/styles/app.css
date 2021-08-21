@@ -1,6 +1,9 @@
 :root {
   --text-color: black;
+  --text-alt-color: white;
+
   --background-color: white;
+  --background-alt-color: black;
 }
 
 body {
@@ -19,12 +22,12 @@ body {
   padding: 0 50px;
   color: var(--text-color);
   line-height: 64px;
-  background: var(--text-color);
+  background: var(--background-alt-color);
   flex: 0 0 auto;
 }
 
 .header-typography {
-  color: var(--background-color);
+  color: var(--text-alt-color);
   font-size: 20px;
   font-weight: bold;
 }
